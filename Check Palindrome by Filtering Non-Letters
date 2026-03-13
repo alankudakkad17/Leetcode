@@ -1,0 +1,21 @@
+def isAlphabeticPalindrome(code):
+    # Write your code here
+    if code is None:
+        return 0
+    code1=""
+    for ch in code:
+        if ch.isalpha():
+           code1+=ch.lower()
+        else: 
+            continue
+    if len(code1)==1:
+        return 1  
+    left,right=0,len(code1)-1
+    while left<right:
+        if code1[left]==code1[right]:
+            left+=1
+            right-=1
+            continue
+        else:
+            return 0
+    return 1
