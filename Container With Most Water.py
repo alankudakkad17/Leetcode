@@ -1,5 +1,7 @@
 class Solution:
     def maxWater(self, arr):
+        if not arr or len(arr)==1:
+            return 0
         l=0
         r=len(arr)-1
         base=0
@@ -12,4 +14,3 @@ class Solution:
             else:
                 r -= 1
         return area
-        
